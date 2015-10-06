@@ -23,8 +23,8 @@ $context->reactions = array(
       'bean-jumpstart-home-page-full-width-b' => array(
         'module' => 'bean',
         'delta' => 'jumpstart-home-page-full-width-b',
-        'region' => 'main_top',
-        'weight' => '-8',
+        'region' => 'fullwidth',
+        'weight' => '-10',
       ),
       'bean-homepage-about-block' => array(
         'module' => 'bean',
