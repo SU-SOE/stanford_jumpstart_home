@@ -1,26 +1,25 @@
 #[Stanford Jumpstart Homepage](https://github.com/SU-SWS/stanford_jumpstart_home)
-##### Version: 7.x-1.3
+##### Version: 7.x-1.4
 
-Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
+Maintainers: [boznik](https://github.com/boznik),[sherakama](https://github.com/sherakama),[cjwest](https://github.com/cjwest)
 
 The Stanford Homepage module provides custom homepage layouts functionality for [Stanford Jumpstart Sites](https://github.com/SU-SWS/stanford_sites_jumpstart). It has a collection of context layouts and blocks that can be quickly toggled on and off through a custom dashboard UI.
-
+This branch provides homepage layouts for JSE.
 
 Layouts
 ---
 
-**Superhero - Batman**
-Description of layout goes here...
+**Hoover**
+Provides an about block, banner block, small custom block, and large custom block.
 
-**Sunset Delorean**
-Description of layout goes here...
+**Morris**
+Provides an about block, banner block, small custom block, auto-generated news block, and auto-generated events block.
 
-**Koda Chrome**
-Description of layout goes here...
+**Terman**
+Provides a full-width banner block, about block, small custom block, large custom block, auto-generated news block, and auto-generated events block.
 
-**Magazine - Glossy**
-Description of layout goes here...
-
+**Pettit**
+Provides a full-width banner block, large about block, large custom block, auto-generated news block, and auto-generated events block.
 
 Installation
 ---
@@ -30,7 +29,7 @@ Install this module like any other module. [See Drupal Documentation](https://dr
 Configuration
 ---
 
-Nothing special needed.
+From the Site Actions menu, use the "Customize Design" tab (admin/stanford-jumpstart/customize-design) to select homepage options.
 
 Troubleshooting
 ---
