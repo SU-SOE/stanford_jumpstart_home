@@ -4,7 +4,7 @@ core = 7.x
 package = Stanford Sites Jumpstart
 version = 7.x-1.4
 project = stanford_jumpstart_home
-project status url = https://github.com/SU-SWS/stanford_jumpstart_home
+project status url = https://github.com/SU-SOE/stanford_jumpstart_home
 
 stylesheets[all][] = css/stanford_jumpstart_home.css
 # scripts[] = js/stanford_jumpstart_home.js
