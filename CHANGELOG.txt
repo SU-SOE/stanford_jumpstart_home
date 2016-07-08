@@ -1,6 +1,11 @@
 Stanford Jumpstart Home
 -------------------------------------------------------------------
 
+7.x-1.4+6-dev                                             2016-06-80
+--------------------------------------------------------------------
+  - Added .gitignore to ignore sass-cache changes
+  - Update styles
+
 7.x-1.4+4-dev                                             2016-02-18
 --------------------------------------------------------------------
   - SOE-338: Add affiliates block to homepage layouts
