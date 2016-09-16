@@ -10,16 +10,22 @@ Layouts
 ---
 
 **Hoover**
-Provides an about block, banner block, small custom block, and large custom block.
+Provides a banner block, an about block, small custom block, large custom block,and a block displaying five affiliate logos in a row.
 
 **Morris**
-Provides an about block, banner block, small custom block, auto-generated news block, and auto-generated events block.
+Provides a banner block, an about block, small custom block, auto-generated two new items block, auto-generated two events block, and a block displaying five affiliate logos in a row.
 
 **Terman**
-Provides a full-width banner block, about block, small custom block, large custom block, auto-generated news block, and auto-generated events block.
+Provides a full-width banner block, about block, small custom block, large custom block, auto-generated two news items block, auto-generated events block, and a block displaying five affiliate logos in a row.
 
 **Pettit**
-Provides a full-width banner block, large about block, large custom block, auto-generated news block, and auto-generated events block.
+Provides a full-width banner block, large about block, large custom block, auto-generated two news items block, and auto-generated two events block, and a block displaying five affiliate logos in a row.
+
+**Kays**
+Provides a full-width banner block, large custom block, small custom block, and a block displaying five affiliate logos in a row.
+
+**Gibbons**
+Provides a full-width banner block, large about block, auto-generated two news items block, five small custom blocks, auto-generated two events block, and no affiliates.
 
 Installation
 ---
