@@ -21,7 +21,10 @@ Provides a full-width banner block, about block, small custom block, large custo
 **Pettit**
 Provides a full-width banner block, large about block, large custom block, auto-generated news block, and auto-generated events block.
 
-Installation
+**Kays**
+ Provides a full-width banner block, large custom block, and a small custom block.
+ 
+ Installation
 ---
 
 Install this module like any other module. [See Drupal Documentation](https://drupal.org/documentation/install/modules-themes/modules-7)
