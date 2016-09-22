@@ -7,5 +7,5 @@ project = stanford_jumpstart_home_dept
 dependencies[] = stanford_jumpstart_home
 ; stylesheets[all][] = css/stanford_module.css
 ; scripts[] = js/stanford_module.js
-project status url = https://github.com/SU-SWS/stanford_jumpstart_home_dept
+project status url = https://github.com/SU-SWS/stanford_jumpstart_home
 ;files[] = stanford_jumpstart_home_dept.install
