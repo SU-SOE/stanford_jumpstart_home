@@ -319,6 +319,153 @@ function stanford_jumpstart_homepage_dashboard_form($form, $form_state) {
 }
 
 /**
+ * stanford_jumpstart_home_dashboard_add_layouts
+ *
+ * Given a module, this adds the layouts specified in the .info file
+ * for that module to the customize design page.
+ *
+ * @param $form
+ * @param $form_state
+ * @param $module_name
+ */
+function stanford_jumpstart_home_dashboard_add_layouts(&$form, &$form_state, $module_name) {
+
+  $filename = drupal_get_path('module', $module_name) . "/" . $module_name . ".info";
+  $info = drupal_parse_info_file($filename);
+  $layouts = $info['layout'];
+
+  foreach ($layouts as $index => $config) {
+
+    $context = context_load($config['context']);
+    $options = variable_get('sjh_' . $context->name, array());
+    $key = $context->name;
+    $access = user_access('see enabled homepage options');
+
+    if (!$context) {
+      drupal_set_message('Could not load context: ' . $config['context'], 'error');
+      continue;
+    }
+
+    if (!$options['site_admin']) {
+      $access = user_access('see disabled homepage options');
+    }
+    // Field Group
+    $form['choosehome']['layouts'][$key] = array(
+      '#type' => 'container',
+      '#tree' => TRUE,
+      '#attributes' => array(
+        'class' => array(
+          'homepage-layout',
+        ),
+      ),
+      '#access' => $access,
+    );
+
+    if (!$context->disabled) {
+      $form['choosehome']['layouts'][$key]["#attributes"]['class'][] = "selected";
+    }
+
+    // Show this option to site owner
+    $form['choosehome']['layouts'][$key]['site_admin'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Enable this option.'),
+      '#description' => t('This checkbox enables users with the "See enabled homepage options" permission to select this layout.'),
+      '#default_value' => isset($options['site_admin']) ? $options['site_admin'] : "",
+      '#access' => user_access('see disabled homepage options'),
+    );
+
+    // Thumbnail
+    $img_path = drupal_get_path('module', 'stanford_jumpstart_home') . "/img/" . $config['thumb'];
+    $variables = array(
+      'path' => $img_path,
+      'alt' => $config['title'],
+      'title' => $config['title'],
+      'height' => 330,
+      'width' => 270,
+      'attributes' => array(),
+    );
+    $form['choosehome']['layouts'][$key]['thumb']["#markup"] = theme_image($variables);
+
+    // Enabled
+    $selectedornot = ($context->disabled) ? t("Select") : t("Selected");
+
+    $form['choosehome']['layouts'][$key]['selector'] = array(
+      '#type' => "button",
+      '#value' => $selectedornot,
+      '#name' => $context->name . "_select",
+      '#submit' => array('stanford_homepage_switch_context'),
+      '#executes_submit_callback' => TRUE,
+      '#attributes' => array('class' => array('clear-both')),
+      "#disabled" => !$context->disabled,
+      '#tree' => TRUE,
+    );
+
+    // Title
+    $form['choosehome']['layouts'][$key]['title']['#markup'] = "<h2 class=\"title\">" . t($config['title']) . "</h2>";
+
+    // Description
+    $form['choosehome']['layouts'][$key]['description']['#markup'] = check_markup($config['description'], 'filtered_html');
+
+    // Context name
+    $form['choosehome']['layouts'][$key]["context_name"] = array(
+      '#type' => "hidden",
+      '#value' => $config['context'],
+    );
+
+    // Body class
+    $form['choosehome']['layouts'][$key]["body_class"] = array(
+      '#type' => "hidden",
+      '#value' => $config['class'],
+    );
+
+    // State machine, or just form states.
+    $form['choosehome']['layouts'][$key]["selectedstate"] = array(
+      '#type' => 'hidden',
+      '#value' => $context->disabled,
+    );
+
+    // Header Image Field
+    if (!empty($config['header_image'])) {
+      $form['choosehome']['layouts'][$key]['header_image'] = array(
+        '#title' => t('Header image'),
+        '#type' => 'managed_file',
+        '#description' => t('The uploaded image will be displayed on this layout as a header image.'),
+        '#default_value' => isset($options['header_image']) ? $options['header_image'] : "",
+        '#upload_location' => 'public://stanford_jumpstart_home/header/',
+        '#process' => array('stanford_jumpstart_home_process_file_managed'),
+        '#states' => array(
+          'invisible' => array(
+            ':input[name="layouts[' . $key . '][selectedstate]"]' => array('value' => 1),
+          ),
+        ),
+      );
+    }
+
+    // Remove these so we can check for other config.
+    unset($config['context']);
+    unset($config['thumb']);
+    unset($config['title']);
+    unset($config['description']);
+    unset($config['class']);
+
+    if (count($config) >= 1) {
+      $form['choosehome']['layouts'][$key]['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Save settings'),
+        '#states' => array(
+          'invisible' => array(
+            ':input[name="layouts[' . $key . '][selectedstate]"]' => array('value' => 1),
+          ),
+        ),
+      );
+    }
+  }
+
+  dpm($form);
+  dpm($form_state);
+}
+
+/**
  * Save all the images!
  * @param  [type] $form       [description]
  * @param  [type] $form_state [description]
