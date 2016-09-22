@@ -47,7 +47,7 @@ function stanford_module_disable() {
  * Implements hook_uninstall().
  */
 function stanford_module_uninstall() {
-  /*
-   *variable_del('upload_file_types');
-   */
+
+  variable_del('sjh_stanford_jumpstart_home_gibbons');
+
 }
