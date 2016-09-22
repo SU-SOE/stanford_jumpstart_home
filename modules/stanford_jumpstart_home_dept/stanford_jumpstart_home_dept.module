@@ -1,8 +1,32 @@
 <?php
 /**
  * @file
- * File description
+ * Stanford Jumpstart Homepage for Department Sites
  *
- * Long description
+ * @author  Caryl Westerberg <cjwest@stanford.edu>
+ * Supports homepage functionality for departments sites.
+ *
  */
 
+/**
+ *  Implements hook_form_FORM_ID_alter()
+ *
+ * @param $form
+ * @param $form_state
+ */
+function stanford_jumpstart_home_dept_form_stanford_jumpstart_homepage_dashboard_form_alter(&$form, &$form_state) {
+
+  dpm($form);
+  dpm($form_state);
+  // Modification for the form with the given form ID goes here. For example, if
+  // FORM_ID is "user_register" this code would run only on the user
+  // registration form.
+
+  // Add a checkbox to registration form about agreeing to terms of use.
+  /*$form['terms_of_use'] = array(
+    '#type' => 'checkbox',
+    '#title' => t("I agree with the website's terms and conditions."),
+    '#required' => TRUE,
+  );
+  */
+}

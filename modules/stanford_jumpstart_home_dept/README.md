@@ -1,17 +1,11 @@
-#[Stanford Module](https://github.com/SU-SWS/stanford_module)
+#[Stanford Jumpstart Homepage for Department Sites](https://github.com/SU-SWS/stanford_jumpstart_home)
 ##### Version: 7.x-1.x
 
-Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
+Maintainers: [cjwest](https://github.com/cjwest), [sherakama](https://github.com/sherakama), [boznik](https://github.com/boznik)
 [Changelog.txt](CHANGELOG.txt)
 
-The Stanford Module feature is used to ...
+The Stanford Jumpstart Homepage for Department Sites supports homepage functionality for departments sites.
 
-
-Sub Modules
----
-
-**[Stanford Module Sub Module](https://github.com/SU-SWS/stanford_module)**
-This module provides the Stanford Person entity reference field. By default an instance of this field is created on Stanford Publications but it may be added to other content types.
 
 Installation
 ---

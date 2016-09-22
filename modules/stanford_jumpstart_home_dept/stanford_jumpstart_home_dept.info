@@ -1,7 +1,7 @@
 name = Stanford Jumpstart Homepage for Department Sites
 description = Provides functionality for supporting department homepages.
 core = 7.x
-package = Stanford Sites Jumpstart
+package = Stanford Sites Jumpstart Engineering
 version = 7.x-1.0-dev
 project = stanford_jumpstart_home_dept
 dependencies[] = stanford_jumpstart_home
