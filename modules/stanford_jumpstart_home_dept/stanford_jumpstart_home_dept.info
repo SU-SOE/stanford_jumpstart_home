@@ -1,0 +1,11 @@
+name = Stanford Jumpstart Homepage for Department Sites
+description = Provides functionality for supporting department homepages.
+core = 7.x
+package = Stanford Sites Jumpstart
+version = 7.x-1.0-dev
+project = stanford_jumpstart_home_dept
+dependencies[] = stanford_jumpstart_home
+; stylesheets[all][] = css/stanford_module.css
+; scripts[] = js/stanford_module.js
+project status url = https://github.com/SU-SWS/stanford_jumpstart_home_dept
+;files[] = stanford_jumpstart_home_dept.install
