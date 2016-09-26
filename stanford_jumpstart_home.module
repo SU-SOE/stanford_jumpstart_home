@@ -1,11 +1,12 @@
 <?php
 /**
  * @file
- * @author Shea McKinney <sheamck@stanford.edu>
+ * @author Shea McKinney <sheamck@stanford.edu>, Caryl Westerberg <cjwest@stanford.edu>
  * Provides the ability to offer several layouts on the home page via context.
  * Provides a dashboard administrative page to toggle through those layouts
  *
  */
+require_once DRUPAL_ROOT . '/' . drupal_get_path('module', 'stanford_jumpstart_home') . '/stanford_jumpstart_home.context.inc';
 
 /**
  * Implements hook_ctools_plugin_api().
@@ -460,9 +461,6 @@ function stanford_jumpstart_home_dashboard_add_layouts(&$form, &$form_state, $mo
       );
     }
   }
-
-  dpm($form);
-  dpm($form_state);
 }
 
 /**
@@ -538,6 +536,34 @@ function stanford_homepage_switch_context($form, $form_state) {
 
   // Save the things.
   stanford_jumpstart_homepage_dashboard_form_submit($form, $form_state);
+}
+
+/**
+ * Given a the name of a homepage layout, set it as the default or "Selected"
+ * homepage layout.
+ *
+ * @param $layout
+ */
+function stanford_homepage_set_default_layout($layout) {
+
+  $context_status = variable_get('context_status', array());
+  $homecontexts = stanford_jumpstart_home_context_default_contexts();
+  $names = array_keys($homecontexts);
+
+  foreach ($names as $context_name) {
+    $context_status[$context_name] = TRUE;
+  }
+
+  $context_status[$layout] = FALSE;
+
+  // Not sure why we are getting an empty space...
+  unset($context_status['']);
+
+  // Save settings.
+  variable_set('stanford_jumpstart_home_active_body_class', $layout);
+  variable_set('stanford_jumpstart_home_active', $layout);
+  variable_set('context_status', $context_status);
+
 }
 
 /**

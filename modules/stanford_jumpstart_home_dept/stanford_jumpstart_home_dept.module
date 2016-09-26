@@ -16,7 +16,7 @@
  */
 function stanford_jumpstart_home_dept_form_stanford_jumpstart_homepage_dashboard_form_alter(&$form, &$form_state) {
 
-  // Add layouts to the customize design page
+  // Add the stanford_jumpstart_home_dept layouts to the customize design page
   stanford_jumpstart_home_dashboard_add_layouts($form, $form_state, 'stanford_jumpstart_home_dept');
 
 }
