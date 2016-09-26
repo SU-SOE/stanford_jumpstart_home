@@ -563,6 +563,7 @@ function stanford_homepage_set_default_layout($layout) {
   variable_set('stanford_jumpstart_home_active_body_class', $layout);
   variable_set('stanford_jumpstart_home_active', $layout);
   variable_set('context_status', $context_status);
+  cache_clear_all('context', 'cache');
 
 }
 
