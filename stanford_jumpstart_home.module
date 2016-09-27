@@ -319,6 +319,7 @@ function stanford_jumpstart_homepage_dashboard_form($form, $form_state) {
   return $form;
 }
 
+
 /**
  * stanford_jumpstart_home_dashboard_add_layouts
  *
@@ -564,7 +565,6 @@ function stanford_homepage_set_default_layout($layout) {
   variable_set('stanford_jumpstart_home_active', $layout);
   variable_set('context_status', $context_status);
   cache_clear_all('context', 'cache');
-
 }
 
 /**

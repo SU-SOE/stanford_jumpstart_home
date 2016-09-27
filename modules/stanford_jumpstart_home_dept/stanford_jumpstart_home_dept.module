@@ -18,5 +18,13 @@ function stanford_jumpstart_home_dept_form_stanford_jumpstart_homepage_dashboard
 
   // Add the stanford_jumpstart_home_dept layouts to the customize design page
   stanford_jumpstart_home_dashboard_add_layouts($form, $form_state, 'stanford_jumpstart_home_dept');
+  dpm($form);
+
+  drupal_add_css(drupal_get_path('module', 'stanford_jumpstart_home_dept')
+    . '/css/stanford_jumpstart_home_dept.css');
+
+  $form['design_container']['styles']['#options']['styles-soe'] =
+    "<span class=\"design-style ds-soe\">" . t('SoE') . "</span>";
+
 
 }
