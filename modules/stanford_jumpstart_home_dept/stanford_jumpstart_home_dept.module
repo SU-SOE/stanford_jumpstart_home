@@ -35,12 +35,12 @@ function stanford_jumpstart_home_dept_form_alter(&$form, &$form_state, $form_id)
     $style = theme_get_setting('styles', $theme);
 
     //Add background screenshot image.
-    $bg_img = '/' . drupal_get_path('module', 'stanford_jumpstart_home_dept')
-      . '/img/design-styles-soe.png';
+    $bg_img = 'style="background-image: url(/' . drupal_get_path('module', 'stanford_jumpstart_home_dept')
+      . '/img/design-styles-soe.png)"';
     dpm($bg_img);
 
     $form['design_container']['styles']['#options']['styles-soe'] =
-      '<span class="design-style ds-soe" style="background-image: url(' . $bg_img . ')>'
+      '<span class="design-style ds-soe"' . $bg_img . '>'
         . t('SoE') . '</span>';
 /*
     style="
