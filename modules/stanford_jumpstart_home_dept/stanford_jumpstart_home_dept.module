@@ -61,4 +61,15 @@ function stanford_jumpstart_home_dept_css_alter(&$css) {
       break;
     default:
   }
+
+
+   // fonts variables
+  /* Todo: add font variables
+    switch ($fonts) {
+      case "fonts-sans":
+       drupal_add_css(drupal_get_path('theme', 'stanford_framework') . '/css/stanford_light/fonts-sans.css', array('group' => CSS_THEME, 'media' => 'all', 'weight' => 98, 'preprocess' => TRUE));
+       break;
+      default:
+  }
+  */
 }
