@@ -35,4 +35,3 @@ function stanford_jumpstart_home_dept_form_alter(&$form, &$form_state, $form_id)
 
   }
 }
-
