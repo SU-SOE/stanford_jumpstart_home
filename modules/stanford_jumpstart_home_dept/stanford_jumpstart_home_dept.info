@@ -6,7 +6,6 @@ version = 7.x-1.0-dev
 project = stanford_jumpstart_home_dept
 ;stylesheets[all][] = css/stanford_jumpstart_home_dept.css
 dependencies[] = stanford_jumpstart_home
-dependencies[] = stanford_soe_helper
 ; scripts[] = js/stanford_module.js
 project status url = https://github.com/SU-SWS/stanford_jumpstart_home
 files[] = stanford_jumpstart_home_dept.install
