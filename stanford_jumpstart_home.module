@@ -86,8 +86,7 @@ function stanford_jumpstart_home_menu() {
  */
 function stanford_jumpstart_home_dashboard() {
   $output = "";
-  drupal_add_css(drupal_get_path('module', 'stanford_jumpstart_home')
-    . "/css/stanford_jumpstart_home.admin.css");
+  drupal_add_css(drupal_get_path('module', 'stanford_jumpstart_home') . "/css/stanford_jumpstart_home.admin.css");
   $form_id = 'stanford_jumpstart_homepage_dashboard_form';
   $form = drupal_get_form($form_id);
   $output .= drupal_render($form);
@@ -104,19 +103,16 @@ function stanford_jumpstart_homepage_dashboard_form($form, $form_state) {
 
   drupal_set_title('Customize Design');
 
-  $filename = drupal_get_path('module', 'stanford_jumpstart_home')
-    . "/stanford_jumpstart_home.info";
+  $filename = drupal_get_path('module', 'stanford_jumpstart_home') . "/stanford_jumpstart_home.info";
   $info = drupal_parse_info_file($filename);
   $layouts = $info['layout'];
 
-  $form['intro']['#markup'] = "<h5>"
-    . t("Use the following options to customize the design and layout of your site. Choose a homepage layout, visual style, and font family") . "</h5>";
+  $form['intro']['#markup'] = "<h5>" . t("Use the following options to customize the design and layout of your site. Choose a homepage layout, visual style, and font family") . "</h5>";
 
   $form['choosehome'] = array(
     '#type' => 'fieldset',
     '#title' => t('Choose home page layout'),
-    '#description' =>
-      t('Press the select button of one of the home page layout options below to select and customize your site\'s home page.'),
+    '#description' => t('Press the select button of one of the home page layout options below to select and customize your site\'s home page.'),
     '#collapsed' => FALSE,
     '#collapsible' => FALSE,
   );
