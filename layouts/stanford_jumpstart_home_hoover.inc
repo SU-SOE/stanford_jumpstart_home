@@ -44,12 +44,6 @@ $context->reactions = array(
         'region' => 'content_lower',
         'weight' => '-9',
       ),
-      'views-3f5a4c4c101b2e6f6d77f52a746a2433' => array(
-        'module' => 'views',
-        'delta' => '3f5a4c4c101b2e6f6d77f52a746a2433',
-        'region' => 'main_bottom',
-        'weight' => '-10',
-      ),
     ),
   ),
 );
