@@ -1,6 +1,0 @@
-Stanford Jumpstart Homepage for Department Sites
-
-Version 7.x-1.0                                                       2016-09-22
---------------------------------------------------------------------------------
-
-- Initial Release
