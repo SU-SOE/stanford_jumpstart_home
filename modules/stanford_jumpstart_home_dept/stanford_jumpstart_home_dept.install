@@ -6,7 +6,7 @@
 /**
  * Implements hook_install().
  */
-function sstanford_jumpstart_home_dept_install() {
+function stanford_jumpstart_home_dept_install() {
   // Populate the default {node_access} record.
   /*
    *db_insert('node_access')
