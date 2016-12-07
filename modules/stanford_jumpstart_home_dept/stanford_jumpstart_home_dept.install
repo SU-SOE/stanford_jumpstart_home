@@ -42,6 +42,10 @@ function stanford_jumpstart_home_dept_enable() {
     variable_set('sjh_' . $config['context'], $config);
 
   }
+
+  // Set Gibbons as default
+  stanford_homepage_set_default_layout('stanford_jumpstart_home_gibbons');
+
 }
 
 /**
@@ -50,6 +54,9 @@ function stanford_jumpstart_home_dept_enable() {
 function stanford_jumpstart_home_dept_disable() {
 
   variable_del('sjh_stanford_jumpstart_home_gibbons');
+
+  // Set Terman as default
+  stanford_homepage_set_default_layout('stanford_jumpstart_home_terman');
 
 }
 
