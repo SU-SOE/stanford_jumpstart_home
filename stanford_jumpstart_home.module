@@ -552,6 +552,10 @@ function stanford_homepage_set_default_layout($layout) {
   $homecontexts = stanford_jumpstart_home_context_default_contexts();
   $names = array_keys($homecontexts);
 
+  if (!in_array($layout, $names)) {
+    throw new Exception('Layout: ' . $layout . ' is not available.');
+  }
+
   $active = variable_get('stanford_jumpstart_home_active', '');
   $context_status[$active] = TRUE;
 
