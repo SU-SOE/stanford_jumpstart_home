@@ -39,10 +39,10 @@ function stanford_jumpstart_home_dept_enable() {
     $config['site_admin'] = 1;
 
     // Add the layout to the database
-    $settings = variable_get('sjh_' . $config['context'], array());
     variable_set('sjh_' . $config['context'], $config);
 
   }
+
 }
 
 /**
