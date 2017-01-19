@@ -30,19 +30,27 @@ $context->reactions = array(
         'module' => 'bean',
         'delta' => 'homepage-about-block',
         'region' => 'content_row3',
-        'weight' => '-10',
+        'weight' => '-20',
       ),
+      // News.
       'views-f73ff55b085ea49217d347de6630cd5a' => array(
         'module' => 'views',
         'delta' => 'f73ff55b085ea49217d347de6630cd5a',
         'region' => 'content_row3',
-        'weight' => '-8',
+        'weight' => '-18',
+      ),
+      // News Extras.
+      'views-9bf4ec9695a5b13242ba5a4898a6b635' => array(
+        'module' => 'views',
+        'delta' => '9bf4ec9695a5b13242ba5a4898a6b635',
+        'region' => 'content_row3',
+        'weight' => '-16',
       ),
       'views-stanford_events_views-block' => array(
         'module' => 'views',
         'delta' => 'stanford_events_views-block',
         'region' => 'content_row3',
-        'weight' => '-7',
+        'weight' => '-14',
       ),
       'bean-jumpstart-large-custom-block' => array(
         'module' => 'bean',
