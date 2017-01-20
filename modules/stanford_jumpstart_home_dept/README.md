@@ -1,5 +1,5 @@
 #[Stanford Jumpstart Homepage for Department Sites](https://github.com/SU-SWS/stanford_jumpstart_home)
-##### Version: 7.x-1.6 
+##### Version: 7.x-1.6-dev
 
 Maintainers: [cjwest](https://github.com/cjwest), [sherakama](https://github.com/sherakama), [boznik](https://github.com/boznik)
 [Changelog.txt](CHANGELOG.txt)
