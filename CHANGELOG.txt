@@ -1,6 +1,10 @@
 Stanford Jumpstart Home
 -------------------------------------------------------------------
 
+7.x-1.6                                                   2017-01-20
+--------------------------------------------------------------------
+ - Added news extras blocks to homepage layouts
+
 7.x-1.5+5-dev                                             2016-12-02
 --------------------------------------------------------------------
  - Removed setting a default homepage for JSE department sites
